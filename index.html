@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Ameya Kulkarni | Full Stack Developer</title>
+    <style>
+      :root {
+        --bg: #f5ecec;
+        --text: #333;
+        --card: #d2cbdd;
+        --shadow-light: #ffffff;
+        --shadow-dark: #a3b1c6;
+      }
+
+      body.dark {
+        --bg: #1e1e1e;
+        --text: #f3f3f3;
+        --card: #1e1e1e;
+        --shadow-light: #2a2a2a;
+        --shadow-dark: #141414;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .neumorphic {
+        background: var(--card);
+        border-radius: 15px;
+        box-shadow: 8px 8px 16px var(--shadow-dark),
+          -8px -8px 16px var(--shadow-light);
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        transition: 0.3s ease;
+      }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: inset 4px 4px 10px var(--shadow-dark),
+          inset -4px -4px 10px var(--shadow-light);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-weight: normal;
+        color: var(--text);
+      }
+
+      p {
+        max-width: 700px;
+        line-height: 1.6;
+        margin: 20px 0;
+      }
+
+      .skills,
+      .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .skill,
+      .project {
+        min-width: 120px;
+        background: var(--card);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px var(--shadow-dark),
+          -5px -5px 10px var(--shadow-light);
+        padding: 10px;
+      }
+
+      .resume-button {
+        margin-top: 30px;
+        background: var(--card);
+        color: var(--text);
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-size: 1rem;
+        box-shadow: 6px 6px 12px var(--shadow-dark),
+          -6px -6px 12px var(--shadow-light);
+        text-decoration: none;
+      }
+
+      .resume-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .social {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .social a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1.1rem;
+        padding: 8px 12px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 8px var(--shadow-dark),
+          -4px -4px 8px var(--shadow-light);
+      }
+
+      .dark-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: var(--card);
+        border: none;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: var(--text);
+        cursor: pointer;
+        box-shadow: 3px 3px 6px var(--shadow-dark),
+          -3px -3px 6px var(--shadow-light);
+      }
+
+      @media (max-width: 600px) {
+        .skills,
+        .projects {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+
+    <div class="container">
+      <div class="neumorphic">
+        <img
+          src="profile.jpg"
+          alt="Your Photo"
+          class="profile-img"
+        />
+        <h1>Ameya Kulkarni</h1>
+        <h2>Full Stack Developer</h2>
+        <p>
+          Cloud-native full stack developer specializing in scalable
+          microservices architecture and AWS Cloud. Proficient in Java, Spring
+          Boot, Angular, and secure RESTful APIs.
+        </p>
+      </div>
+
+      <div class="neumorphic">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div><i class="fab fa-java"></i> Java |</div>
+          <div><i class="fab fa-js-square"></i> JavaScript |</div>
+          <div><i class="fab fa-angular"></i> Angular |</div>
+          <div><i class="fas fa-cloud"></i> AWS Cloud |</div>
+          <div><i class="fas fa-cubes"></i> Microservices |</div>
+          <div><i class="fas fa-database"></i> MySQL |</div>
+          <div><i class="fas fa-code"></i> Spring Boot |</div>
+          <div><i class="fas fa-tools"></i> DevOps</div>
+        </div>
+      </div>
+
+      <div class="neumorphic">
+        <h2>Projects</h2>
+        <div class="projects" style="flex-direction: column; gap: 20px">
+          <div class="project" style="padding: 20px; text-align: left">
+            <h3>Fantasy Prediction League</h3>
+            <p>
+              A full-stack web app where users predict IPL match outcomes, join
+              leagues, and compete on leaderboards. Built with Spring Boot,
+              Angular, and AWS Cognito.
+            </p>
+            <a href="https://yourdemo1.com" target="_blank">🔗 Live Demo</a>
+          </div>
+
+          <div class="project" style="padding: 20px; text-align: left">
+            <h3>WhatsApp Daily Quiz</h3>
+            <p>
+              Serverless quiz platform sending daily questions via WhatsApp.
+              Users reply with answers and get instant scoring. Powered by
+              Spring Boot, Twilio, and AWS Lambda.
+            </p>
+            <a href="https://yourdemo2.com" target="_blank">🔗 Live Demo</a>
+          </div>
+
+          <div class="project" style="padding: 20px; text-align: left">
+            <h3>Movie Quiz App</h3>
+            <p>
+              Responsive web quiz app on movie trivia. Angular frontend with a
+              Spring Boot backend. Includes authentication and leaderboard
+              features.
+            </p>
+            <a href="https://yourdemo3.com" target="_blank">🔗 Live Demo</a>
+          </div>
+
+          <div class="project" style="padding: 20px; text-align: left">
+            <h3>Spring Cloud Config Setup</h3>
+            <p>
+              Microservice template with centralized configuration using Spring
+              Cloud Config Server, Eureka, API Gateway, and JWT-based security
+              with AWS Cognito.
+            </p>
+            <a href="https://yourdemo4.com" target="_blank">🔗 Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://example.com/resume.pdf"
+        target="_blank"
+        class="resume-button"
+        >📄 Download Resume</a
+      >
+
+      <div class="neumorphic social-section">
+        <h2>Connect with Me</h2>
+        <div class="social-icons">
+          <a
+            href="https://github.com/your-username"
+            target="_blank"
+            title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/your-username"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/your-username"
+            target="_blank"
+            title="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="mailto:youremail@example.com" title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
